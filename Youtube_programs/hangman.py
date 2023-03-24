@@ -1,5 +1,5 @@
 import random
-from words import words
+from Youtube_programs.words import words
 import string
 
 
