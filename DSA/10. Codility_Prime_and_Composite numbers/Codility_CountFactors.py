@@ -11,4 +11,5 @@ def solution(N):
         result += 1
     return result
 
+
 print(solution(16))

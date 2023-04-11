@@ -1,5 +1,5 @@
 # from collections import Counter
-def solution(A): 
+def solution(A):
     candidate = -1
     candidate_count = 0
     # candidate_index = []
@@ -7,7 +7,7 @@ def solution(A):
     for index in range(len(A)):
         if candidate_count == 0:
             candidate = A[index]
-            candidate_count +=1
+            candidate_count += 1
             # candidate_index = index
         else:
             if A[index] == candidate:
@@ -15,7 +15,7 @@ def solution(A):
                 candidate_index = index
             else:
                 candidate_count -= 1
-    if len([number for number in A if number == candidate]) <= len(A)//2:
+    if len([number for number in A if number == candidate]) <= len(A) // 2:
         return -1
     else:
         return candidate_index
@@ -23,8 +23,8 @@ def solution(A):
         #     if value == candidate:
         #         candidate_index.append(index)
         # return candidate_index
-        
 
-A=[3,4,3,2,3,-1,3,3]
+
+A = [3, 4, 3, 2, 3, -1, 3, 3]
 
 print(solution(A))

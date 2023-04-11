@@ -1,4 +1,4 @@
-'''
+"""
 Write an efficient algorithm for the following assumptions:
 
 . N is an integer within the range [1..1,000,000];
@@ -6,10 +6,10 @@ Write an efficient algorithm for the following assumptions:
 . the result will be an integer within the range [−2,147,483,648..2,147,483,647].
 --> note 3: result can be negative value, so max_ending = max(a, max_ending + a)
 
-for empty subarray are admitted, result will return 0 if input contains no positive elements (including when the input is empty) 
+for empty subarray are admitted, result will return 0 if input contains no positive elements (including when the input is empty)
 
-'''
-# cho moi vi tri, ta se tinh toan largest sum ending tai vi tri do. 
+"""
+# cho moi vi tri, ta se tinh toan largest sum ending tai vi tri do.
 # Gia su maximum sum ending tai vi tri i la max_ending
 # khi do maximal slice ending o vi tri i+1 se la max(A[i+1], max_ending + A[i+1])
 def solution(A):
@@ -25,5 +25,6 @@ def solution(A):
         print("-------------------")
     return max_slice
 
-A = [3,2,-6,4,0]
+
+A = [3, 2, -6, 4, 0]
 print(solution(A))

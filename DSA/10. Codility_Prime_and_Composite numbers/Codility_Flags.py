@@ -1,14 +1,18 @@
 # Peak
 from math import sqrt
+
+
 def transform(A):
     peak_pos = len(A)
     last_height = A[-1]
     for p in range(len(A) - 1, 0, -1):
-        if (A[p - 1] < A[p] > last_height):
+        if A[p - 1] < A[p] > last_height:
             peak_pos = p
         last_height = A[p]
         A[p] = peak_pos
     A[0] = peak_pos
+
+
 def can_fit_flags(A, k):
     flag = 1 - k
     for i in range(k):
@@ -17,6 +21,8 @@ def can_fit_flags(A, k):
             return False
         flag = A[flag + k]
     return flag < len(A)  # last flag planted successfully
+
+
 def solution(A):
     transform(A)
     lower = 0
@@ -30,10 +36,11 @@ def solution(A):
             upper = next
     return lower
 
-A = [1,5,3,4,3,4,1,2,3,4,6,2]
+
+A = [1, 5, 3, 4, 3, 4, 1, 2, 3, 4, 6, 2]
 print(solution(A))
 
-'''
+"""
 `O(N)` preprocessing (done inplace):
     A[i] := next peak or end position after or at position i
             (i for a peak itself, len(A) after last peak)
@@ -83,4 +90,4 @@ If we choose `X = floor(sqrt(N)) + 2` we get the following total algorithm upper
        {lose the lower order bound}
     O(sqrt(N) * log(sqrt(N)))
     O(sqrt(N) * log(N))
-'''
+"""
