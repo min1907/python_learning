@@ -12,7 +12,7 @@ def solution(A):
             # S[i] = "empty"
             result += 1
             # print(result)
-        elif i == N - 1 and S[i] == ">":
+        elif i == (N - 1) and S[i] == ">":
             # print("if2")
             result += 1
             # print(result)
