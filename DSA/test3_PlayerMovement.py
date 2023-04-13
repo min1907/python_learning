@@ -6,10 +6,10 @@ def solution(A):
     S = deque(A)
     N = len(S)
     for i in range(N):
-        print(f"element = {S[i]}")
+        # print(f"element = {S[i]}")
         if i == 0 and (S[i] == "<" or S[i] == "^" or S[i] == "v"):
             # print("if1")
-            # S[i] = "empty"
+            S[i] = "empty"
             result += 1
             # print(result)
         elif i == (N - 1) and S[i] == ">":
@@ -33,7 +33,7 @@ S1 = "><^v"
 # print(solution(S1))
 
 S2 = "<<^<v>>"
-# print(solution(S2))
+print(solution(S2))
 
 S3 = "><><"
-print(solution(S3))
+# print(solution(S3))

@@ -16,4 +16,4 @@ def count_total(P, x, y):
 
 A = [2, 3, 7, 5, 1, 3, 9]
 P = prefix_sums(A)
-print(count_total(P, 2, 5))  # 16 = 7+5+1+3 = 21-5
+print(count_total(P, 0, 0))  # 16 = 7+5+1+3 = 21-5
