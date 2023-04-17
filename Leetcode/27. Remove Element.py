@@ -10,6 +10,7 @@ class Solution:
             if nums[i] != val:
                 nums[count] = nums[i]
                 count += 1
+        print(nums)
         return count
 
 
