@@ -55,15 +55,15 @@ def solution(direction, radius, X, Y):
     return count
 
 
-# direction = "U"
-# radius = 5
-# X = [-1,-2,4,1,3,0]
-# Y = [5,4,3,3,1,-1]
+direction = "U"
+radius = 5
+X = [-1,-2,4,1,3,0]
+Y = [5,4,3,3,1,-1]
 
-direction = "D"
-radius = 10
-X = [0, -3, 2, 0]
-Y = [-10, -3, -7, -5]
+# direction = "D"
+# radius = 10
+# X = [0, -3, 2, 0]
+# Y = [-10, -3, -7, -5]
 
 # direction = "R"
 # radius = 3
